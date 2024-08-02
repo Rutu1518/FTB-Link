@@ -31,7 +31,7 @@ const postLink = async(req,res)=>{
             });
     }   
 
-    link.views = link.views + 1;
+    link.view = link.view + 1;
     await link.save();
   
      return res.redirect(link.target); 

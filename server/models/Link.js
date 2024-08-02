@@ -15,7 +15,7 @@ const linkSchema = new Schema({
         type:String,
         require:true,
     },
-    views:{
+    view:{
         type:Number,
         require:0
     }
