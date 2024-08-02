@@ -7,7 +7,7 @@ const postLink = async(req,res)=>{
     const link = new Link({
       target,
       slug,
-      title
+      title      
     });
   
     const savedlink = await link.save();
@@ -31,7 +31,7 @@ const postLink = async(req,res)=>{
             });
     }   
 
-    link.view = link.view + 1;
+    link.views = link.views + 1;
     await link.save();
   
      return res.redirect(link.target); 

@@ -15,10 +15,11 @@ const linkSchema = new Schema({
         type:String,
         require:true,
     },
-    view:{
+    views:{
         type:Number,
-        require:0
-    }
+        require:true,
+        default:0
+        }
 
    },{
         timestamps:true
