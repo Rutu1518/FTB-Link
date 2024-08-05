@@ -1,12 +1,9 @@
-
-
-
 .form-heading{
     text-align: center;
     font-size: 35px;
     color: #ff4da6;
 }
-.user-form{   
+.Login-form{   
     width: 450px;
     height: auto;
     border: 2px solid #f61f8b;
@@ -16,11 +13,12 @@
     border-radius: 10px;
     background-color:  #ff4da6;
 }
-.user-input{
+.Login-input{
     display: block;
     width: 90%;
     margin: 20px auto;
     display: block;
+    height: 50px;
     border-radius: 10px;
     border: 1px solid #f61f8b;
     font-size: 20px;
@@ -29,7 +27,7 @@
     outline: none;
     border: 1px solid #f61f8b;
 }
-.btn-all{
+.login-btn{
     background-color:  #ffad33; 
     border-radius: 30px;
     padding: 10px 20px;
@@ -38,9 +36,8 @@
     margin-top: 50px;
     margin-left: 130px;
     font-size: 20px;
-
 }
-.btn-all:hover{
+.login-btn:hover{
     transition: 0.3s;
     background-color: #f61f8b;
 }
@@ -51,8 +48,4 @@
     text-decoration: none;
     color:black;
     font-size: 20px;
-}
-.login-btn{
-    margin: 0px auto;
-    width: 150px;
 }

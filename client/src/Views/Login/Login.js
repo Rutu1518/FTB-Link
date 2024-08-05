@@ -33,11 +33,11 @@ function Login() {
     <div>
       <h1 className='form-heading'>User Login</h1>
 
-      <form className='user-form'>
+      <form className='Login-form'>
         <input
           type='email'
           placeholder='Email'
-          className='user-input'
+          className='Login-input'
           value={email}
           onChange={(e) => setemail(e.target.value)}
           />
@@ -45,7 +45,7 @@ function Login() {
         <input
           type='password'
           placeholder='Password'
-          className='user-input'
+          className='Login-input'
           value={password}
           onChange={(e) => setpassword(e.target.value)}
           />
@@ -53,7 +53,7 @@ function Login() {
         <button
           type='button'
           onClick={loginNow}
-          className='btn-all login-btn'>
+          className='login-btn'>
           Login
         </button>
         

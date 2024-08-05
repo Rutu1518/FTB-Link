@@ -43,11 +43,11 @@ function Signup() {
     <div>
       <h1 className='form-heading'>User Registration</h1>
 
-      <form className='user-form'>
+      <form className='Signup-form'>
         <input
           type="text"
           placeholder="Fullname"
-          className='user-input'
+          className='Signup-input'
           value={user.fullName}
           onChange={(e) => setUser({ ...user, fullName: e.target.value})}
           />
@@ -55,7 +55,7 @@ function Signup() {
         <input
           type="email"
           placeholder="Email"
-          className='user-input'
+          className='Signup-input'
           value={user.email}
           onChange={(e)=>setUser({...user, email: e.target.value})}
           />
@@ -63,7 +63,7 @@ function Signup() {
         <input
           type="password"
           placeholder="Password"
-          className='user-input'
+          className='Signup-input'
           value={user.password}
           onChange={(e)=>setUser({...user, password: e.target.value})}
           />
@@ -71,14 +71,14 @@ function Signup() {
         <input
           type="date"
           placeholder="Date of Birth"
-          className='user-input'
+          className='Signup-input'
           value={user.dob}
           onChange={(e)=>setUser({...user, dob: e.target.value})}
           />
 
        <button
           type='button'
-          className='btn-all'
+          className='Signup-btn'
           onClick={signup}
           >
           Register
