@@ -11,16 +11,25 @@ function Home() {
     target: "",
     slug: ""
   })
-  const [user, setUser]= useState('')
+  const [user, setUser]= useState({})
   const [links, setLinks] = useState([])
 
   const shortenURL = async () => { 
+
+const {title,target,slug} = linkData
+
     if (!linkData.title || !linkData.target || !linkData.slug) {
       toast.error("Please Enter all details")
       return
     }
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/link`, linkData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/link`, 
+      {
+        title:title,
+        target:target,
+        slug:slug,
+        user:user?._id
+      });
       if (response.data.success) {
           toast.success("Link Shortened Successfully..");
           setlinkData({
@@ -53,9 +62,11 @@ function Home() {
   if(!user || !user._id){
     return
   } 
+  toast.loading("links loading")
   const response = await axios.get(`${process.env.REACT_APP_API_URL}/Links?userId=${user._id}`);
   toast.dismiss();
   setLinks(response.data.data)
+  console.log(response.data.data)
   toast.success(`All Links fetched Successfully`)
  }
    useEffect(() => {
@@ -106,11 +117,12 @@ function Home() {
     <h2 className='Link-section-heading'>Link section</h2>
        <div className='AllLinkContainer'> 
      {links?.map((link, i) => {
-    const { title, slug, target, views, createdAt } = link
+    const { _id,title, slug, target, views, createdAt } = link
 
     return (
       <Linkcard
         key={i}
+        _id={_id}
         title={title}
         slug={slug}
         target={target}

@@ -10,7 +10,7 @@ function Login() {
   const [password, setpassword] = useState('')
 
   const loginNow = async() => {
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/Login`, {
       email: email,
       password: password
     })

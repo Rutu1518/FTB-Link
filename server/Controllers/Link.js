@@ -1,14 +1,15 @@
 
-import Link from "../models/link.js";
-import User from "./../models/user.js"
+import Link from "../models/Link.js";
+import User from "../models/User.js";
+
 const postLink = async(req,res)=>{
-  const { target,slug,title,User}=req.body;
+  const { target,slug,title,user}=req.body;
 
   const link = new Link({            
     target,
     slug,
     title, 
-    User    
+    user    
   });
   const savedlink = await link.save();  
   res.json({
@@ -29,7 +30,7 @@ const getLinks = async (req, res) => {
           message: "User not found"
       })
   }
-  const allLinks = await Link.find({user :userId }).sort({ createdAt : -1 })
+  const allLinks = await Link.find({"user" : userId }).sort({ createdAt : -1 })
   res.json({
       success: true,
       data: allLinks,

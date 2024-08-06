@@ -4,8 +4,9 @@ import dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
 
-import { postLink, getRedirectlink , getLinks} from "./Controllers/Link.js";
-import {postSignup, postLogin } from "./Controllers/User.js";
+
+import { postLink, getRedirectlink , getLinks} from "./Controllers/link.js";
+import {postSignup, postLogin } from "./Controllers/user.js";
 
 const app = express();
 app.use(cors());
