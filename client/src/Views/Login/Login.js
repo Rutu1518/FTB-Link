@@ -24,8 +24,6 @@ function Login() {
      setTimeout(()=>{
        window.location.href = '/'
      }, 3000)
-    }else{
-      toast.error(response.data.message)
     }
   }
 
@@ -59,9 +57,7 @@ function Login() {
         
         <Link to='/Signup' className='reference-links'>Don't have an account? Signup</Link>
         
-      </form>
-
-     
+      </form>   
 
       <Toaster />
     </div>

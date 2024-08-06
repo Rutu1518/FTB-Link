@@ -19,8 +19,12 @@ const linkSchema = new Schema({
         type:Number,
         require:true,
         default:0
+        },
+   user:{
+        type : Schema.Types.ObjectId,
+        ref : "User",
+        require : true
         }
-
    },{
         timestamps:true
     });

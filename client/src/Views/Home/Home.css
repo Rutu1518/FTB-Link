@@ -1,13 +1,25 @@
-.home-page-heading {
-    text-align: center;
+.home-page-heading {    
+    margin-left: 70px;
 }
 
+.AllLinkContainer{
+    overflow-y: auto;
+    max-height: 500px;
+    /* margin-top: -20px;   */
+}
+.Link-section-heading{
+    font-size: 35px;
+    margin-left: 35%;
+    margin-top: -53px;
+    color: #ff4da6;
+}
+/* .Link-section-heading{
+    
+} */
 .link-form {
     width: 90%;
-    max-width: 450px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
+    max-width: 450px;  
+    margin-top: 30px;
     background-color: #ff4da6;
     padding: 20px;
     border-radius: 10px;
@@ -78,4 +90,8 @@
         width: 80px;
         font-size: 16px;
     } 
+}
+.Links-main-container{
+    display: flex;
+    justify-content: space-around;
 }

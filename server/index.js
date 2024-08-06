@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
 
-import { postLink, getRedirectlink } from "./Controllers/Link.js";
+import { postLink, getRedirectlink , getLinks} from "./Controllers/Link.js";
 import {postSignup, postLogin } from "./Controllers/User.js";
 
 const app = express();
@@ -29,9 +29,11 @@ app.get("/health", (req, res) => {
 });
 
 app.post("/link", postLink);
+app.get("/Links", getLinks);
 app.get("/:slug", getRedirectlink);
 app.post("/signup", postSignup);
-app.post("Login", postLogin);
+app.post("/Login", postLogin);
+
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
