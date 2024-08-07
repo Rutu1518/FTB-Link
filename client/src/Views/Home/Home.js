@@ -63,7 +63,7 @@ const {title,target,slug} = linkData
   if(!user || !user._id){
     return
   } 
-  toast.loading("links loading")
+  toast.loading("Loading Links... ")
   const response = await axios.get(`${process.env.REACT_APP_API_URL}/Links?userId=${user._id}`);
   toast.dismiss();
   setLinks(response.data.data)
@@ -76,7 +76,7 @@ const {title,target,slug} = linkData
 
  return (
   <div>  
-    <h2>Hello {user.fullName}</h2> 
+    <h2 className='user-name'>Hello...🤩 {user.fullName}</h2> 
       <h1 className='home-page-heading'>Shorten your links in seconds...✌</h1>
       
     <div className='Links-main-container'>

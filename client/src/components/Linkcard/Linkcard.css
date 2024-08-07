@@ -68,3 +68,28 @@
     font-size: 18px;
     font-weight: 500px;
 }
+
+  .link-card-delete{
+    background-color:#ff9900;
+    color: #fff;
+    font-size: 20px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 15px;
+    /* margin-left: 20px; */
+    cursor: pointer;
+  }
+  .link-card-edit{
+    text-decoration: none;
+    background-color: #fb047f;
+    color: white; 
+    width: 100px; 
+    font-size: 20px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    padding: 3px 20px;
+    margin: 0 30px;
+  }

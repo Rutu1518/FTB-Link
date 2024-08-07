@@ -1,10 +1,11 @@
 import React from 'react'
 import "./Linkcard.css"
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast'
 import shortUrlimg from "./icon/short-link.png"
 import targetUrlimg from "./icon/target-link.png"
-import viewIcon from "./icon/eye.png"
+import viewIcon from "./icon/show.png"
 
  function Linkcard({_id, title, slug, target, views, createdAt}) {
 
@@ -14,6 +15,8 @@ import viewIcon from "./icon/eye.png"
     toast.success(response.data.message)
     
   }
+
+
 
   const shortUrl = `${process.env.REACT_APP_API_URL}/${slug}`
   return (
@@ -36,8 +39,7 @@ import viewIcon from "./icon/eye.png"
       </p>
     </div>
 
-    <div className='link-card-views'>    
-      
+    <div className='link-card-views'>          
        {views}
         <img src={viewIcon} className='view-icon'>         
        </img>
@@ -47,9 +49,15 @@ import viewIcon from "./icon/eye.png"
       {new Date(createdAt).toLocaleString()}      
      </span> 
           
-     <button className="transaction-card-delete" onClick={deleteLink}>
+     <button className="link-card-delete" onClick={deleteLink}>
         Delete
       </button>
+
+      <Link  to={`/Update/${_id}`} >
+        <button className='link-card-edit'>Edit 
+       </button>    
+      </Link>
+
       <Toaster/>
   </div>
   )

@@ -65,11 +65,33 @@ const getLinks = async (req, res) => {
       data: null
     })
   }
+  const updatelink = async (req, res)=>{  
+    const{       
+        title,
+        target,
+        slug,       
+    } = req.body
 
- 
+    const{ id } = req.params
 
+    await Link.updateOne({_id : id},{
+        $set:{
+            title:title,
+            target:target,
+            slug:slug,           
+        }
+    })
+    const updatedlink = await link.findById(id)
+
+    res.json({
+        success:true,
+        data:updatedlink ,
+        message:"link updated successfully"
+    })
+  }
   export {postLink,
           getRedirectlink,
           getLinks,
-          deleteLink
+          deleteLink,
+          updatelink
          }
