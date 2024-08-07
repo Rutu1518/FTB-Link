@@ -37,8 +37,9 @@ import viewIcon from "./icon/eye.png"
     <span className='link-card-created-at'>
       {new Date(createdAt).toLocaleString()}      
      </span> 
+          
   
-    </div>
+  </div>
   )
 }
 

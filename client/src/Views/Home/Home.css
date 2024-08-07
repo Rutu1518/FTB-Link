@@ -19,7 +19,7 @@
 .link-form {
     width: 90%;
     max-width: 450px;  
-    margin-top: 30px;
+    margin-top: 20px;
     background-color: #ff4da6;
     padding: 20px;
     border-radius: 10px;
@@ -95,3 +95,14 @@
     display: flex;
     justify-content: space-around;
 }
+
+.home-logout{
+    position: fixed;
+    bottom: 10px;
+    margin: 0;
+    color: #ff4da6;
+    right: 5%;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight:500px ;
+  }

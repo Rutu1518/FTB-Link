@@ -52,7 +52,7 @@ const {title,target,slug} = linkData
    }
 
     if (!currentUser) {
-    window.location.href = '/login'
+    window.location.href = "/Login"
   }
 }, [])
 
@@ -112,8 +112,10 @@ const {title,target,slug} = linkData
         Shorten
         </button>
       </form>
-    
+     
     <div>
+   
+
     <h2 className='Link-section-heading'>Link section</h2>
        <div className='AllLinkContainer'> 
      {links?.map((link, i) => {
@@ -131,11 +133,25 @@ const {title,target,slug} = linkData
         />
         );
       })}
+      
       </div>
      </div>
     </div>
+     
+    <div>
+      <span className='home-logout' onClick={() => {
+      localStorage.clear()
+      toast.success('Logged out successfully')
 
-    <Toaster />
+      setTimeout(()=>{
+        window.location.href = '/login'
+         }, 3000)
+       }}>
+     <h3>Logout</h3>
+    </span> 
+    </div>
+
+    <Toaster/>
     
     </div>
   )

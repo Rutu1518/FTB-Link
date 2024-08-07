@@ -34,19 +34,20 @@
     border: none;
     cursor: pointer;
     margin-top: 50px;
-    margin-left: 130px;
-    font-size: 20px;
+    margin-left: 35%;
+    width: 150px;
+    font-size: 22px;
 
 }
-.Signup-btn:hover{
+/* .Signup-btn:hover{
     transition: 0.3s;
     background-color: #f61f8b;
-}
+} */
 .reference-links{
     text-align: center;
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     text-decoration: none;
     color:black;
-    font-size: 20px;
+    font-size: 25px;
 }
