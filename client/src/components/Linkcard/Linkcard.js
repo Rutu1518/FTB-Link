@@ -40,7 +40,7 @@ import viewIcon from "./icon/show.png"
     </div>
 
     <div className='link-card-views'>          
-       {views}
+        {views}
         <img src={viewIcon} className='view-icon'>         
        </img>
     </div>
