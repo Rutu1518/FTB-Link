@@ -54,9 +54,22 @@ const getLinks = async (req, res) => {
      return res.redirect(link.target); 
   }
 
+  const deleteLink = async (req, res) => {
+    const {id} = req.params;
+  
+    await Link.deleteOne({_id: id});
+  
+    res.json({
+      success: true,
+      message: `Link deleted successfully`,
+      data: null
+    })
+  }
+
  
 
   export {postLink,
           getRedirectlink,
-          getLinks
+          getLinks,
+          deleteLink
          }

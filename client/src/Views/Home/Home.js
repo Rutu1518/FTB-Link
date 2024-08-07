@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Home.css'
 import toast, { Toaster } from 'react-hot-toast'
 import Linkcard from '../../components/Linkcard/Linkcard';
+import magicimg from './icon/magic.png'
 
 function Home() { 
   
@@ -103,7 +104,7 @@ const {title,target,slug} = linkData
           onChange={(e) => setlinkData({ ...linkData, slug: e.target.value })}
           className="form-content"
         />
-
+      <div className='link-form-bottom'>
         <button 
           type='button' 
           className='form-btn'
@@ -111,6 +112,8 @@ const {title,target,slug} = linkData
           >
         Shorten
         </button>
+        <img src={magicimg} className='magic-img'></img>
+        </div>
       </form>
      
     <div>
