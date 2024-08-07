@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 function Updatelink() {
 
     const {id} = useParams();
+
     const[title, settitle] = useState("")
     const[target, settarget] = useState("")
     const[slug, setslug] = useState("")   
@@ -19,21 +20,21 @@ function Updatelink() {
             title:title,
             target:target,
             slug:slug          
-        })
-         
-        toast.success(response.data.message)
-       
+        })         
+        toast.success(response.data.message)       
     }
    
-    const loadlink = async (id) =>{
+    const loadlink = async () =>{
         if(!id){
             return
         }
         const response = await axios.get(`${process.env.REACT_APP_API_URL}/link/${id}`)       
         const{title,target,slug} = response.data.data       
+       
         settitle(title)
         settarget(target)
         setslug(slug) 
+
       }
         useEffect(() => {        
         loadlink(id)        
@@ -49,28 +50,24 @@ function Updatelink() {
        onChange={(e)=>settitle(e.target.value)}
        className="link-input"              
        />
-
-
-
-    <input type="text"
+      <input type="text"
        placeholder="target"
        value={target}
        onChange={(e)=>settarget(e.target.value)}
        className="link-input"              
        />
 
-    <input type="text"
+      <input type="text"
        placeholder="slug"
        value={slug}
        onChange={(e)=>setslug(e.target.value)}
        className="link-input"              
        />
-   <button type='button' onClick={Updatelink}  className='add-link-btn'>Update link</button>
+   <button type='button' onClick={Updatelink} className='add-link-btn'>Update link</button>
     </form>
     <br/>
     <br/>
     <br/>
-
     <Link  to="/">
        <button className='show-all-link-btn'>Show All Link</button>
        </Link>

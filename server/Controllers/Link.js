@@ -65,30 +65,68 @@ const getLinks = async (req, res) => {
       data: null
     })
   }
-  const updatelink = async (req, res)=>{  
-    const{       
-        title,
-        target,
-        slug,       
-    } = req.body
 
-    const{ id } = req.params
+  // const updatelink = async (req, res)=>{  
+  //   const{       
+  //       title,
+  //       target,
+  //       slug,       
+  //   } = req.body
 
-    await Link.updateOne({_id : id},{
+  //   const{ id } = req.params
+
+  //  await Link.updateOne({_id : id},{
+  //       $set:{
+  //           title:title,
+  //           target:target,
+  //           slug:slug,           
+  //       }
+  //   })
+  //   const updatedlink = await Link.findById(id)
+  //   res.json({
+  //       success:true,
+  //       data:updatedlink,
+  //       message:"link updated successfully"
+  //   })
+  // }
+
+
+  const updatelink = async (req, res) => {
+    const {id} = req.params;
+
+    const updatedresult = await Link.updateOne({_id:id},{
         $set:{
-            title:title,
-            target:target,
-            slug:slug,           
+          title:title,
+          target:target,
+          slug:slug,  
         }
     })
-    const updatedlink = await link.findById(id)
-
     res.json({
         success:true,
-        data:updatedlink ,
-        message:"link updated successfully"
+        message:"Link updated successfully",
+        data: updatedresult
     })
-  }
+
+
+    const updatedlink= await Plant.findByIdAndUpdate(id, {
+      title,
+      target,
+      slug       
+    }, { new: true });
+
+    if (!updatedlink) {
+        return res.json({
+            success: false,
+            message: `Link not found for id ${id}`,
+            data: null
+        });
+    }
+    res.json({
+        success: true,
+        message: "Link updated successfully",
+        data:updatedlink
+    });
+};
   export {postLink,
           getRedirectlink,
           getLinks,

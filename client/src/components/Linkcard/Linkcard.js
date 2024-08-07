@@ -15,9 +15,6 @@ import viewIcon from "./icon/show.png"
     toast.success(response.data.message)
     
   }
-
-
-
   const shortUrl = `${process.env.REACT_APP_API_URL}/${slug}`
   return (
     <div className='link-card'>
