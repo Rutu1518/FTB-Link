@@ -104,7 +104,7 @@ function Home() {
             onChange={(e) => setlinkData({ ...linkData, slug: e.target.value })}
             className="form-content"
           />
-          <div className='link-form-bottom'>
+          <div>
             <button
               type='button'
               className='form-btn'

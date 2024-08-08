@@ -15,10 +15,11 @@ import viewIcon from "./icon/show.png"
     toast.success(response.data.message)
     
   }
+
   const shortUrl = `${process.env.REACT_APP_API_URL}/${slug}`
   return (
     <div className='link-card'>
-
+      
      <h3 className='link-card-title'>{title || "No Title"}</h3>
   
       <div className='link-card-short-url'>
