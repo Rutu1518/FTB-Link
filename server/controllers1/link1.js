@@ -1,5 +1,5 @@
 
-import Link from "../models/Link1.js";
+import Link from "../models/Link.js";
 import User from "../models/User.js";
 
 const postLink = async(req,res)=>{
