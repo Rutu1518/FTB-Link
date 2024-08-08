@@ -10,7 +10,7 @@
 
 .AllLinkContainer{
     overflow-y:scroll;  
-    max-height: 500px;
+    max-height: 400px;
     /* margin-top: -20px;   */
 }
 ::-webkit-scrollbar {
@@ -24,6 +24,7 @@
 }
 .link-form {
     width: 90%;
+    max-height:400px ;
     max-width: 450px;  
     margin-top: 20px;
     background-color: #ff4da6;
