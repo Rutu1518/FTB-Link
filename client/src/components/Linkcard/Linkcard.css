@@ -151,7 +151,7 @@
     
     @media (max-width: 480px) {
         .link-card {
-            width: 150px;
+            width: 250px;
             padding: 8px;
             margin: 8px 5px;
         }

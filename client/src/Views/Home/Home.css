@@ -160,7 +160,6 @@
         font-weight: 300px;
     }
 }
-
 @media (max-width: 480px) {
     .AllLinkContainer {
         max-height: 250px;
