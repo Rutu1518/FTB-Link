@@ -5,7 +5,7 @@ dotenv.config();
 import mongoose from "mongoose";
 import { postLink, getRedirectlink , getLinks, deleteLink, updatelink} from "./controllers/link.js";
 import {postSignup, postLogin } from "./controllers/user.js";
-import link from './controllers/link.js'
+
 
 const app = express();
 app.use(cors());

@@ -132,4 +132,4 @@ const getLinks = async (req, res) => {
           getLinks,
           deleteLink,
           updatelink
-         }
+         };
