@@ -3,8 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
-import { postLink, getRedirectlink , getLinks, deleteLink, updatelink} from "./controllers1/link.js.js";
-import {postSignup, postLogin } from "./controllers1/user.js";
+import { postLink, getRedirectlink , getLinks, deleteLink, updatelink} from "./controllers/link.js.js.js";
+import {postSignup, postLogin } from "./controllers/user.js";
 
 
 const app = express();
