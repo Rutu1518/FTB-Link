@@ -105,13 +105,17 @@
 
 .home-logout{
     position: fixed;
-    bottom: 5px;
+    /* bottom: 5px; */
     margin: 0;
-    color: #ff4da6;
-    right: 5%;
+   
+    color: #fb047f;
+  
+    padding: 20px;
+    top: 1%;
+    right: 2%;
     cursor: pointer;
-    font-size: 30px;
-    font-weight:500px ;
+    font-size: 35px;
+    font-weight:500px;
   }
   .magic-img{
     height: 170px;

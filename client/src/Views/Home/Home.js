@@ -142,7 +142,7 @@ function Home() {
       </div>
 
       <div>
-        <span className='home-logout' onClick={() => {
+        <span  onClick={() => {
           localStorage.clear()
           toast.success('Logged out successfully')
 
@@ -150,11 +150,11 @@ function Home() {
             window.location.href = '/login'
           }, 3000)
         }}>
-          <h3>Logout</h3>
+          <h3 className='home-logout'>Logout</h3>
         </span>
       </div>
 
-      <Toaster />
+      <Toaster/>
 
     </div>
   )
