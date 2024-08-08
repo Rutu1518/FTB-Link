@@ -75,5 +75,4 @@ function Updatelink() {
     </div>
   )
 }
-
 export default Updatelink
