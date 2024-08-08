@@ -23,9 +23,9 @@
     color: #fb047f;
 }
 .link-form {
-    width: 90%;
+    /* width: 90%; */
     max-height:400px ;
-    max-width: 450px;  
+    width: 450px;  
     margin-top: 20px;
     background-color: #ff4da6;
     padding: 20px;
@@ -99,6 +99,7 @@
 }
 .Links-main-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
