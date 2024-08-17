@@ -1,281 +1,153 @@
 .link-card {
-        background-color: white;
-        padding: 10px;
-        margin: 15px 10px;
-        border-radius: 10px; 
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-        width: 600px;
-        position: relative;
+    background-color: white;
+    padding: 10px;
+    margin: 15px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    position: relative;
+    overflow: hidden;
 }
-    
-    .link-card-title {
-        margin: 0;
-        font-size: 25px;
-    }
-    
-    .link-card-target-url {
-        display: flex;
-        flex-direction: row;     
-    }
-    
-    .target-url {
-        margin-left: 10px;
-    }
-    
-    .link-card-target-url a {
-        text-decoration: none;
-        font-size: 20px;
-    }
-    
-    .link-card-short-url {
-        display: flex;
-        flex-direction: row;
-        margin-top: 15px;
-    }
-    
-    .link-card-short-url a {
-        text-decoration: none;
-        font-size: 22px;
-        color: #fb047f;
-    }
-    
-    .short-url-icon {
-        height: 40px;    
-    }
-    
-    .target-url-icon {
-        height: 30px;  
-    }
-    
-    .link-card-views {
-        position: absolute;
-        color: black;
-        right: 10px;
-        top: 10px;
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;  
-    }
-    
-    .view-icon {
-        height: 27px;   
-        margin-left: 5px;
-        margin-top: -1px;
-    }
-    
-    .link-card-created-at {
-        position: absolute;
-        bottom: 0;
-        right: 10px;
-        font-size: 18px;
-        font-weight: 500;
-    }
-    
-    .link-card-delete {
-        background-color: #ff9900;
-        color: #fff;
-        font-size: 20px;
-        width: 100px;
-        height: 30px;
-        border: none;
-        padding: 2px 5px;
-        border-radius: 15px;   
-        cursor: pointer;
-    }
-    
-    .link-card-edit {
-        text-decoration: none;
-        background-color: #fb047f;
-        color: white; 
-        width: 100px; 
-        font-size: 20px;
-        height: 30px;
-        border-radius: 30px;
-        border: none;
-        padding: 3px 20px;
-        margin: 0 30px;
-    }
-    
-    @media (max-width: 768px) {
-        .link-card {
-            width: 480px;
-            padding: 10px;
-            margin: 10px 5px;
-            
-        }
-    
-        .link-card-title {
-            font-size: 10px;
-        }
-    
-        .link-card-target-url a {
-            font-size: 18px;
-        }
-    
-        .link-card-short-url a {
-            font-size: 20px;
-        }
-    
-        .short-url-icon {
-            height: 35px;
-        }
-    
-        .target-url-icon {
-            height: 25px;
-        }
-    
-        .link-card-views {
-            font-size: 18px;
-        }
-    
-        .view-icon {
-            height: 24px;
-        }
-    
-        .link-card-created-at {
-            font-size: 16px;
-        }
-    
-        .link-card-delete {
-            font-size: 18px;
-            width: 80px;
-            height: 25px;
-        }
-    
-        .link-card-edit {
-            font-size: 18px;
-            width: 80px;
-            padding: 3px 15px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .link-card {
-            width: 250px;
-            padding: 8px;
-            margin: 8px 5px;
-        }
-    
-        .link-card-title {
-            font-size: 10px;
-        }
-    
-        .link-card-target-url a {
-            font-size: 16px;
-        }
-    
-        .link-card-short-url a {
-            font-size: 18px;
-        }
-    
-        .short-url-icon {
-            height: 30px;
-        }
-    
-        .target-url-icon {
-            height: 20px;
-        }
-    
-        .link-card-views {
-            font-size: 16px;
-        }
-    
-        .view-icon {
-            height: 20px;
-        }
-    
-        .link-card-created-at {
-            font-size: 14px;
-        }
-    
-        .link-card-delete {
-            font-size: 16px;
-            width: 70px;
-            height: 20px;
-        }
-    
-        .link-card-edit {
-            font-size: 16px;
-            width: 70px;
-            padding: 2px 10px;
-        }
-    }
-    
-  
 
-.link-card-title{
-   margin: 0;
-   font-size: 25px;
+.link-card-title {
+    margin: 0;
+    font-size: 25px;
 }
-.link-card-target-url{
-    display:flex;
-    flex-direction: row;     
-   
+
+.link-card-target-url {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
 }
-.target-url{
+
+.target-url {
     margin-left: 10px;
 }
-.link-card-target-url a{
+
+.link-card-target-url a {
     text-decoration: none;
     font-size: 20px;
 }
-.link-card-short-url{
-    display:flex;
+
+.link-card-short-url {
+    display: flex;
     flex-direction: row;
     margin-top: 15px;
 }
-.link-card-short-url a{
+
+.link-card-short-url a {
     text-decoration: none;
     font-size: 22px;
-    color:  #fb047f;
+    color: #fb047f;
 }
-.short-url-icon{
-    height: 40px;    
+
+.short-url-icon {
+    height: 40px;
 }
-.target-url-icon{
-    height: 30px;  
+
+.target-url-icon {
+    height: 30px;
 }
-.link-card-views{
+
+.link-card-views {
     position: absolute;
     color: black;
     right: 10px;
-    top:10px;
+    top: 10px;
     font-size: 20px;
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
 }
-.view-icon{
-    height: 27px;   
-    margin-left: 5px;
-    margin-top: -1px;
+
+.view-icon {
+    height: 27px;
+    margin-left: 5px;  
+    margin-top: -2px;  
 }
-.link-card-created-at{
+
+.link-card-created-at {
     position: absolute;
-    bottom: 0;
+    bottom: 0;   
     right: 10px;
     font-size: 18px;
-    font-weight: 500px;
+    font-weight: 500;
 }
-  .link-card-delete{
-    background-color:#ff9900;
+
+.link-card-delete {
+    background-color: #ff9900;
     color: #fff;
     font-size: 20px;
     width: 100px;
     height: 30px;
     border: none;
     padding: 2px 5px;
-    border-radius: 15px;   
+    border-radius: 15px;
     cursor: pointer;
-  }
-  .link-card-edit{
+}
+
+.link-card-edit {
     text-decoration: none;
     background-color: #fb047f;
-    color: white; 
-    width: 100px; 
+    color: white;
+    width: 100px;
     font-size: 20px;
     height: 30px;
     border-radius: 30px;
     border: none;
     padding: 3px 20px;
     margin: 0 30px;
-  }
+}
+@media (max-width: 600px) {
+    .link-card {
+        width: 90%;
+    }
+
+    .link-card-title {
+        font-size: 20px;
+    }
+
+    .link-card-target-url a {
+        font-size: 17px;
+    }
+
+    .link-card-short-url a {
+        font-size: 17px;
+    }
+
+    .short-url-icon {
+        height: 35px;
+        
+    }
+
+    .target-url-icon {
+        height: 25px;
+    }
+
+    .link-card-views {
+        font-size: 17px;
+      
+    }
+
+    .view-icon {
+        height: 20px;
+            
+    }
+
+    .link-card-created-at {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+
+    .link-card-delete {
+        font-size: 18px;
+        width: 70px;
+        height: 28px;
+    }
+
+    .link-card-edit {
+        font-size: 18px;
+        width: 70px;
+        padding: 3px 15px;
+    }
+}

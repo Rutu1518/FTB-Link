@@ -24,7 +24,7 @@ import viewIcon from "./icon/show.png"
   
       <div className='link-card-short-url'>
          <img src={shortUrlimg} className='short-url-icon'></img>       
-          <a href={shortUrl} target='_blank'>             
+          <a href={shortUrl} className='target-url' target='_blank'>             
          {shortUrl}</a>
       </div>
  
