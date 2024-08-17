@@ -1,12 +1,13 @@
 .user-name {
     text-align: center;
     font-size: 40px;  
-    margin: 0;  
+    margin-top: 0;  
    
 }
 @media (max-width: 768px) {
     .user-name {
         font-size: 32px; 
+        margin-top: 30px;
     }
 }
 @media (max-width: 480px) {
@@ -17,15 +18,18 @@
 
 .home-page-heading {    
     margin-left: 70px;
+    font-size: 30px;
 }
 @media (max-width: 768px) {
     .home-page-heading {
         margin-left: 50px; 
+        font-size: 20px;
     }
 }
 @media (max-width: 480px) {
     .home-page-heading {
-        margin-left: 30px; 
+        margin-left: 25px; 
+        font-size: 19px;
     }
 }
 
@@ -94,6 +98,7 @@
     .link-form {
         width: 450px;
         padding: 15px; 
+        margin-top: -2px;
     }
 
     .form-content {
